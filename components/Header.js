@@ -11,29 +11,24 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Link from 'next/link';
 
-const pages = ['Projects', 'About'];
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+
+const pages = ['Projects'];
 
 const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link href="/">
+          <Link href="/" sx={{'&:hover': {cursor: 'pointer'}}}>
             <Typography
               variant="h5"
               noWrap
               component="div"
-              sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, '&:hover': {cursor: 'pointer'}}}
+              sx={{ mr: 2, display: { xs: 'none', md: 'flex' }}}
             >
               Abdulrahim Mansour
             </Typography>
@@ -44,31 +39,28 @@ const ResponsiveAppBar = () => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
               color="inherit"
             >
               <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
                 horizontal: 'left',
               }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
             >
+              <MenuItem>
+                <Link href="https://github.com/abdulmansour"><GitHubIcon sx={{marginX: "5px", '&:hover': { backgroundColor: "primary.light"}, display: { xs: 'flex', md: 'none' }}}/></Link>
+                <Link href="https://www.linkedin.com/in/mansourabdulrahim/"><LinkedInIcon sx={{marginX: "5px",'&:hover': { backgroundColor: "primary.light"}, display: { xs: 'flex', md: 'none' }}}/></Link>
+                <Link href="mailto:mansour.abdulrahim@gmail.com"><EmailIcon sx={{marginX: "5px",'&:hover': { backgroundColor: "primary.light"}, display: { xs: 'flex', md: 'none' }}}/></Link>
+              </MenuItem>
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page}>
                     <Link href={`/${page.toLowerCase()}`}>
                       <Typography textAlign="center">{page}</Typography>
                     </Link>
@@ -90,13 +82,17 @@ const ResponsiveAppBar = () => {
             {pages.map((page) => (
               <Link key={page} href={`/${page.toLowerCase()}`}>
                 <Button
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block', '&:hover': { backgroundColor: "#18332b", opacity: [0.9, 0.8, 0.7]} }}
+                  sx={{ my: 2, color: 'white', display: 'block', '&:hover': { backgroundColor: "primary.light"} }}
                 >
                   {page}
                 </Button>
               </Link>
             ))}
+          </Box>
+          <Box sx={{ justifyContent: "right", display: 'flex' }}>
+            <Link href="https://github.com/abdulmansour"><GitHubIcon sx={{marginX: "5px", '&:hover': { backgroundColor: "primary.light"}, display: { xs: 'none', md: 'flex' }}}/></Link>
+            <Link href="https://www.linkedin.com/in/mansourabdulrahim/"><LinkedInIcon sx={{marginX: "5px",'&:hover': { backgroundColor: "primary.light"}, display: { xs: 'none', md: 'flex' }}}/></Link>
+            <Link href="mailto:mansour.abdulrahim@gmail.com"><EmailIcon sx={{marginX: "5px",'&:hover': { backgroundColor: "primary.light"}, display: { xs: 'none', md: 'flex' }}}/></Link>
           </Box>
         </Toolbar>
       </Container>
