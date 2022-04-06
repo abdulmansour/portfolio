@@ -5,9 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0;
 }
 
-.logo {
-  height: 1em;
-  margin: 5px;
+.footer div {
+  display: flex;
 }

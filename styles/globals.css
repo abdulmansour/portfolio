@@ -1,0 +1,19 @@
+.react-pdf__Page__annotations.annotationLayer {
+    display: none;
+}
+
+.react-pdf__Page__canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.icon {
+    color: "primary";
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.icon:hover {
+    background-color: "primary.light";
+}
