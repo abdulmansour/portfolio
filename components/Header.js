@@ -37,7 +37,7 @@ const ResponsiveAppBar = () => {
               variant="h5"
               noWrap
               component="div"
-              sx={{ mr: 2, display: { xs: 'none', md: 'flex' }}}
+              sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, '&:hover': { backgroundColor: "primary.light"}}}
             >
               Abdulrahim Mansour
             </Typography>
@@ -76,30 +76,32 @@ const ResponsiveAppBar = () => {
                 <Link href="https://www.linkedin.com/in/mansourabdulrahim/"><LinkedInIcon sx={{marginX: "5px",'&:hover': { backgroundColor: "grey.300"}, display: { xs: 'flex', md: 'none' }}}/></Link>
                 <Link href="mailto:mansour.abdulrahim@gmail.com"><EmailIcon sx={{marginX: "5px",'&:hover': { backgroundColor: "grey.300"}, display: { xs: 'flex', md: 'none' }}}/></Link>
               </MenuItem>
-              <MenuItem>
-                <Link href='static/pdf/cv.pdf' download>
-                <Typography textAlign="center">Resume</Typography>
-                </Link>
-              </MenuItem>
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link href={`/${page.toLowerCase()}`}>
-                      <Typography textAlign="center">{page}</Typography>
-                    </Link>
+              <Link href='static/pdf/cv.pdf' download>
+                <MenuItem>
+                  <Typography textAlign="center">Resume</Typography>
                 </MenuItem>
+              </Link>
+              {pages.map((page) => (
+                <Link href={`/${page.toLowerCase()}`}>
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
-          <Link href="/">
-            <Typography
-              variant="h5"
-              noWrap
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-            >
-              Abdulrahim Mansour
-            </Typography>
-          </Link>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Link href="/">
+              <Typography
+                variant="h5"
+                noWrap
+                component="span"
+                sx={{'&:hover': { backgroundColor: "primary.light"}}}
+              >
+                Abdulrahim Mansour
+              </Typography>
+            </Link>
+          </Box>
           <Box sx={{ flexGrow: 1, justifyContent: "right", display: { xs: 'none', md: 'flex' } }}>
             <Link href='static/pdf/cv.pdf' download>
               <Button
@@ -120,7 +122,7 @@ const ResponsiveAppBar = () => {
             ))}
           </Box>
           <Box sx={{ justifyContent: "right", display: 'flex' }}>
-            <Link href="https://github.com/abdulmansour"><GitHubIcon sx={{marginX: "5px", '&:hover': { backgroundColor: "grey.light"}, display: { xs: 'none', md: 'flex' }}}/></Link>
+            <Link href="https://github.com/abdulmansour"><GitHubIcon sx={{marginX: "5px", '&:hover': { backgroundColor: "primary.light"}, display: { xs: 'none', md: 'flex' }}}/></Link>
             <Link href="https://www.linkedin.com/in/mansourabdulrahim/"><LinkedInIcon sx={{marginX: "5px",'&:hover': { backgroundColor: "primary.light"}, display: { xs: 'none', md: 'flex' }}}/></Link>
             <Link href="mailto:mansour.abdulrahim@gmail.com"><EmailIcon sx={{marginX: "5px",'&:hover': { backgroundColor: "primary.light"}, display: { xs: 'none', md: 'flex' }}}/></Link>
           </Box>
