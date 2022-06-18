@@ -26,6 +26,16 @@ export default function Projects() {
                             </Typography>
                             <img src='static/images/driving_school_sass.png'/>
                         </Grid>
+                        <Grid item>
+                            <Typography
+                                variant="h5"
+                                noWrap
+                                component="div"
+                            >
+                                Consulting Work - Data Pipeline
+                            </Typography>
+                            <img src='static/images/data_pipeline.png'/>
+                        </Grid>
                     </Grid>
                 </div>
                 <Footer />
