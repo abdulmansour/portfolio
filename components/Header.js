@@ -115,20 +115,6 @@ const ResponsiveAppBar = () => {
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 </Link>
-              </MenuItem>
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link href={`/${page.toLowerCase()}`}>
-                      <Typography textAlign="center">{page}</Typography>
-                    </Link>
-                </MenuItem>
-              </Link>
-              {pages.map((page) => (
-                <Link href={`/${page.toLowerCase()}`}>
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                </Link>
               ))}
             </Menu>
           </Box>
