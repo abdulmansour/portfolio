@@ -66,8 +66,8 @@ export default function Home() {
                     </ListItemAvatar>
                     <p>
                       Working remotely as a <b>Web developer</b> for Bell,
-                      contibuting to the enrichment of a PWA with React and
-                      Typescript
+                      contibuting to the enrichment of a PWA with React,
+                      Typescript, NodeJs and Spring boot
                     </p>
                   </ListItem>
                   <ListItem>
@@ -81,7 +81,7 @@ export default function Home() {
                     <p>
                       Worked as a <b>Cloud data engineer</b> for Bell
                       contributing to the enrichment of on-prem ETL pipelines
-                      with Hadoop, Presto, Janusgraph and Openshift.
+                      with Hadoop, Presto, Janusgraph and Openshift
                     </p>
                   </ListItem>
                   <ListItem>
