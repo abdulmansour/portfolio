@@ -17,13 +17,13 @@ export default function Projects() {
           <Grid container sx={{ padding: "20px" }}>
             <Grid item>
               <Typography variant="h5" noWrap component="div">
-                Consulting Work - Driving School Platform
+                Amazon Seller Dashboard
               </Typography>
-              <img src="static/images/driving_school_sass.png" />
+              <img src="static/images/amzseller.png" width="1300px" />
             </Grid>
             <Grid item>
               <Typography variant="h5" noWrap component="div">
-                Consulting Work - Data Crawling Pipeline
+                Data Crawling Pipeline
               </Typography>
               <img src="static/images/data_pipeline.png" />
             </Grid>
