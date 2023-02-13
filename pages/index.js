@@ -138,8 +138,9 @@ export default function Home() {
                       />
                     </ListItemAvatar>
                     <p>
-                      Completing <b>Associate Cloud Engineer</b> (ACE) and{" "}
-                      <b>Proffesional Cloud Architect</b> (PCA) certifications
+                      Completed <b>Associate Cloud Engineer</b> (ACE) and
+                      completing <b>Proffesional Cloud Architect</b> (PCA)
+                      certifications
                     </p>
                   </ListItem>
                   <ListItem>
