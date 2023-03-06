@@ -52,7 +52,7 @@ export default function Home() {
                 color="text.secondary"
                 sx={{ fontSize: "16px" }}
               >
-                Full-Stack Web Developer
+                Full Stack Engineer
               </Typography>
             </Grid>
             <Grid item alignItems="flexStart" justifyContent="center">
