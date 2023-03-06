@@ -14,6 +14,11 @@ import {
   Link,
 } from "@mui/material";
 
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+  if (newWindow) newWindow.opener = null;
+};
+
 export default function Home() {
   return (
     <div>
@@ -47,7 +52,7 @@ export default function Home() {
                 color="text.secondary"
                 sx={{ fontSize: "16px" }}
               >
-                Full-Stack Web Developer
+                Full Stack Engineer
               </Typography>
             </Grid>
             <Grid item alignItems="flexStart" justifyContent="center">
@@ -65,7 +70,7 @@ export default function Home() {
                       />
                     </ListItemAvatar>
                     <p>
-                      Working remotely as a <b>Web developer</b> for Bell,
+                      Working remotely as a <b>Full Stack Engineer</b> for Bell,
                       contibuting to the enrichment of a PWA with React,
                       Typescript, NodeJs and Spring boot
                     </p>
@@ -73,15 +78,21 @@ export default function Home() {
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar
-                        alt="CGI"
-                        src="/static/images/cgi.png"
-                        sx={{ marginY: "10px", width: 35, height: 35 }}
+                        alt="Qualgo"
+                        src="/static/images/qualgo.png"
+                        sx={{
+                          marginY: "10px",
+                          width: 35,
+                          height: 35,
+                          ":hover": { cursor: "pointer" },
+                        }}
+                        onClick={() => openInNewTab("https://www.qualgo.io")}
                       />
                     </ListItemAvatar>
                     <p>
-                      Worked as a <b>Cloud data engineer</b> for Bell
-                      contributing to the enrichment of on-prem ETL pipelines
-                      with Hadoop, Presto, Janusgraph and Openshift
+                      Co-founded a software consulting company. Together with my
+                      team, we help clients thrive and solve their complex
+                      problems.
                     </p>
                   </ListItem>
                   <ListItem>
@@ -93,7 +104,7 @@ export default function Home() {
                       />
                     </ListItemAvatar>
                     <p>
-                      Worked as a <b>Web developer</b> integrating the Coveo
+                      Worked as a <b>Software Engineer</b> integrating the Coveo
                       solution accross a plethora of tech stacks, ranging from
                       e-commerce websites, to salesforce lightning communities,
                       to custom Typescript and React applications
@@ -121,7 +132,17 @@ export default function Home() {
                       <Avatar
                         alt="Amazon Seller"
                         src="/static/images/amz_seller.png"
-                        sx={{ marginY: "10px", width: 35, height: 35 }}
+                        sx={{
+                          marginY: "10px",
+                          width: 35,
+                          height: 35,
+                          ":hover": { cursor: "pointer" },
+                        }}
+                        onClick={() =>
+                          openInNewTab(
+                            "https://www.amazon.ca/stores/Krenzo/Homepage/page/7DEBE880-E96B-4B9A-B8F3-BEE97BEA6351"
+                          )
+                        }
                       />
                     </ListItemAvatar>
                     <p>
@@ -134,7 +155,17 @@ export default function Home() {
                       <Avatar
                         alt="Digital Nomad"
                         src="/static/images/gcp.png"
-                        sx={{ marginY: "10px", width: 35, height: 35 }}
+                        sx={{
+                          marginY: "10px",
+                          width: 35,
+                          height: 35,
+                          ":hover": { cursor: "pointer" },
+                        }}
+                        onClick={() =>
+                          openInNewTab(
+                            "https://www.credential.net/6a53eb88-6fb5-4985-b1df-117c480d6b22?key=fa8db3d4e5e7bb7ea7d4cd0c81200fd67f1a866b9f91a4d9898351620f9a881e"
+                          )
+                        }
                       />
                     </ListItemAvatar>
                     <p>
@@ -152,9 +183,8 @@ export default function Home() {
                       />
                     </ListItemAvatar>
                     <p>
-                      Aspiring to become a proficient{" "}
-                      <b>Full stack web developer</b> and to live a{" "}
-                      <b>digital nomad</b> lifestyle
+                      Aspiring to become a proficient <b>Full Stack Engineer</b>{" "}
+                      and to live a <b>digital nomad</b> lifestyle
                     </p>
                   </ListItem>
                   <ListItem>
